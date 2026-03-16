@@ -25,14 +25,15 @@ app.add_middleware(
 )
 
 # Route includes
-app.include_router(auth_router)
-app.include_router(stock_router)
-app.include_router(admin_router)
-app.include_router(sip_router)
-app.include_router(onboarding_router)
-app.include_router(watchlist_router)
+app.include_router(auth_router, prefix="/api")
+app.include_router(stock_router, prefix="/api")
+app.include_router(admin_router, prefix="/api")
+app.include_router(sip_router, prefix="/api")
+app.include_router(onboarding_router, prefix="/api")
+app.include_router(watchlist_router, prefix="/api")
 
-@app.get("/")
+@app.get("/api")
+@app.get("/api/status")
 async def root():
     try:
         from backend.database import users_collection
