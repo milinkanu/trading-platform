@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException
-from auth.rbac import trader_required
-from services.stock_service import get_stock_data
-from services.ai_service import get_ai_analysis
+from backend.auth.rbac import trader_required
+from backend.services.stock_service import get_stock_data
+from backend.services.ai_service import get_ai_analysis
 
 router = APIRouter(prefix="/stock", tags=["Stock"])
 

@@ -1,12 +1,12 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import os
-from routes.auth_routes import router as auth_router
-from routes.stock_routes import router as stock_router
-from routes.admin_routes import router as admin_router
-from routes.sip_routes import router as sip_router
-from routes.onboarding_routes import router as onboarding_router
-from routes.watchlist_routes import router as watchlist_router
+from backend.routes.auth_routes import router as auth_router
+from backend.routes.stock_routes import router as stock_router
+from backend.routes.admin_routes import router as admin_router
+from backend.routes.sip_routes import router as sip_router
+from backend.routes.onboarding_routes import router as onboarding_router
+from backend.routes.watchlist_routes import router as watchlist_router
 
 app = FastAPI(title="TradingView API")
 

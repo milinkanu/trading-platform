@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from pydantic import BaseModel
 from bson import ObjectId
-from database import users_collection
-from auth.rbac import admin_required, get_current_user
+from backend.database import users_collection
+from backend.auth.rbac import admin_required, get_current_user
 
 router = APIRouter(prefix="/admin", tags=["Admin"])
 

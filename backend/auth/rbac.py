@@ -1,7 +1,7 @@
 from fastapi import Depends, HTTPException, status, Header
 from typing import Optional
 from fastapi.security import OAuth2PasswordBearer
-from auth.jwt_handler import decode_token
+from backend.auth.jwt_handler import decode_token
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/auth/login")
 

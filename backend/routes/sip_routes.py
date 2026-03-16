@@ -3,8 +3,8 @@ from pydantic import BaseModel
 from typing import List, Optional
 from datetime import datetime
 import httpx
-from database import sip_collection
-from auth.rbac import trader_required
+from backend.database import sip_collection
+from backend.auth.rbac import trader_required
 from bson import ObjectId
 
 router = APIRouter(prefix="/sip", tags=["SIP"])

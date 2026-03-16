@@ -2,8 +2,8 @@ from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel
 from typing import Dict, List, Any, Optional
 from datetime import datetime
-from database import users_collection
-from auth.rbac import get_optional_user
+from backend.database import users_collection
+from backend.auth.rbac import get_optional_user
 from bson import ObjectId
 
 router = APIRouter(prefix="/onboarding", tags=["Onboarding"])

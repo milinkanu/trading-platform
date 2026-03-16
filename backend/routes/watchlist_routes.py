@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from pydantic import BaseModel
 from typing import List
-from database import watchlist_collection
-from auth.rbac import trader_required
+from backend.database import watchlist_collection
+from backend.auth.rbac import trader_required
 
 router = APIRouter(prefix="/watchlist", tags=["Watchlist"])
 
