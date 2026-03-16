@@ -13,3 +13,4 @@ anthropic
 python-dotenv
 httpx
 google-generativeai
+dnspython
