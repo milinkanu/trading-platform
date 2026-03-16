@@ -35,7 +35,7 @@ app.include_router(watchlist_router)
 @app.get("/")
 async def root():
     try:
-        from database import users_collection
+        from backend.database import users_collection
         # Try a simple operation to check DB connection
         count = await users_collection.count_documents({})
         return {"status": "TradingView API running", "database": "connected", "user_count": count}

@@ -1,7 +1,10 @@
-import sys
-import os
+from fastapi import FastAPI
+app = FastAPI()
 
-# Add the project root to sys.path
-sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
+@app.get("/api/status")
+async def status():
+    return {"status": "ok", "message": "Minimal API is running"}
 
-from backend.main import app
+@app.get("/api/{path:path}")
+async def catch_all(path: str):
+    return {"status": "ok", "path": path}
