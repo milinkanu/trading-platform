@@ -5,6 +5,9 @@ pydantic
 pydantic-settings
 python-jose[cryptography]
 passlib
+yahooquery
+pandas
+pandas-ta
 anthropic
 python-dotenv
 httpx
