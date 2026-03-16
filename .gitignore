@@ -1,0 +1,27 @@
+**/__pycache__/
+**/*.pyc
+**/*.msi
+**/*.exe
+backend/.env
+backend/venv/
+backend/error_log.txt
+backend/error.txt
+backend/full_error.txt
+backend/debug_ai.py
+backend/debug_full.py
+backend/debug_full_v2.py
+backend/debug2.py
+backend/debug.py
+backend/test_anthropic.py
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+frontend/.env.*.local
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+*.log
